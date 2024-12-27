@@ -79,8 +79,8 @@ struct sbull_dev {
         spinlock_t lock;                /* 互斥锁 */
     	struct blk_mq_tag_set tag_set;	/* 标签集 */
         struct request_queue *queue;    /* 设备请求队列 */
-        Struct gendisk *gd;
-struct timer_list timer;        /* 用于模拟介质更改的定时器 */
+        struct gendisk *gd;
+	struct timer_list timer;        /* 用于模拟介质更改的定时器 */
 };
 
 static struct sbull_dev *Devices = NULL;
